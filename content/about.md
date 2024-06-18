@@ -1,5 +1,5 @@
 ---
-title: About me
+title: About
 description: Learn more about me, Christopher Klint, an Engineering Manager at Telness Tech, and my journey in the tech industry.
 ---
 

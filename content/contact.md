@@ -1,5 +1,5 @@
 ---
-title: Contact me
+title: Contact
 description: Reach out to me by filling out the form and give your questions, comments, and other feedback.
 ---
 
