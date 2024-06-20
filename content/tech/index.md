@@ -15,7 +15,7 @@ Maintaining a PKMS allows me to share my learning journey as I attempt to demyst
 ## Topics Covered
 
 In this digital garden, you'll find a variety of topics related to the tech industry, including but not limited to:
-- Software development
+- [[tech/software-development/index|Software development]]
 - Web development
 - Cloud computing
 - DevOps
