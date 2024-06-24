@@ -22,3 +22,5 @@ My aim is to provide valuable insights and practical advice on a wide range of t
 I am always eager to hear from you! Your thoughts, questions, and suggestions are incredibly valuble to me. Feel free to reach out me via the contact page 😀
 
 ## Recent posts
+
+- [[building-a-static-website-with-quartz-markdown-cloudflare-pages|Building a static website with Quartz, Markdown, and Cloudflare Pages]]

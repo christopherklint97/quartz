@@ -7,7 +7,7 @@ Hi there! 👋 My name is Chris and I am an Engineering Manager at [Telness Tech
 Why I created this website is because I am a huge fan of [learning in public](https://medium.com/my-learning-journal/why-you-should-learn-in-public-4fd3a6239549) and believe in transparency, openness and communication. I also strive to share what I have learned and give back to the community.
 
 Here are some places where I like to write and share my ideas:
-## [[tech/index|Tech Digital Garden]]
+## [[tech/index|Tech digital garden]]
 
 This is my digital garden for software engineering and the tech industry as a whole. I tend to write more guides and personal notes on what I have learned and what I would like to learn in the future. All feedback is welcome! Call me an idiot if you have to 😃
 ## [[blog/index|Blog]]

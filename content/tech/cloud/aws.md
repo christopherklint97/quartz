@@ -1,6 +1,6 @@
 ---
 title: AWS services and cost optimization strategies
-description: Read this guide to understand the core AWS services and how to optimize costs effectively.
+description: Understand the core AWS services and how to optimize costs effectively.
 ---
 
 Understanding the core services and how they can be used is crucial for optimizing their use and minimizing costs. This page provides an overview of the most important AWS services and includes checklists to help reduce expenses.

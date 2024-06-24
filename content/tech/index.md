@@ -1,5 +1,5 @@
 ---
-title: Tech Digital Garden
+title: Tech digital garden
 description: This is my tech digital garden showcasing my different learnings on software engineering and the tech industry as a whole.
 ---
 Welcome to my tech digital garden where I keep my PKMS (Personal Knowledge Management System). The purpose of this space is to learn in public and provide resources to help others understand various topics in the tech industry. My goal is to contribute to the community by sharing insights, industry best practices, and practical know-how about specific subjects.

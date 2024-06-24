@@ -20,5 +20,5 @@ Cloud computing refers to the delivery of computing services—including servers
 In this section, we will dive deep into the three leading cloud service providers: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP). Each provider offers a different suite of services, tools, and solutions tailored to various needs and use cases.
 
 - [[aws|Amazon Web Services (AWS)]]
-- Microsoft Azure
+- [[azure|Microsoft Azure]]
 - Google Cloud Platform

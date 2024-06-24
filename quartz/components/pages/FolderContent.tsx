@@ -13,10 +13,15 @@ interface FolderContentOptions {
    * Whether to display number of folders
    */
   showFolderCount: boolean
+  /**
+   * Whether to display a list of pages in the folder
+   */
+  showPageListing: boolean
 }
 
 const defaultOptions: FolderContentOptions = {
   showFolderCount: true,
+  showPageListing: false,
 }
 
 export default ((opts?: Partial<FolderContentOptions>) => {
@@ -48,18 +53,20 @@ export default ((opts?: Partial<FolderContentOptions>) => {
     return (
       <div class={classes}>
         <article>{content}</article>
-        <div class="page-listing">
-          {options.showFolderCount && (
-            <p>
-              {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
-                count: allPagesInFolder.length,
-              })}
-            </p>
-          )}
-          <div>
-            <PageList {...listProps} />
+        {options.showPageListing && (
+          <div class="page-listing">
+            {options.showFolderCount && (
+              <p>
+                {i18n(cfg.locale).pages.folderContent.itemsUnderFolder({
+                  count: allPagesInFolder.length,
+                })}
+              </p>
+            )}
+            <div>
+              <PageList {...listProps} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     )
   }

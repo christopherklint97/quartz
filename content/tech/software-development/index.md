@@ -1,5 +1,5 @@
 ---
-title: Software Development
+title: Software development
 description: Learn about software development principles, best practices, and tools to build high-quality software applications.
 ---
 
