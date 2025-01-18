@@ -2,19 +2,13 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    target-branch: "main"
     schedule:
       interval: "weekly"
+      day: "monday"
+      time: "08:00"
     groups:
-      production-dependencies:
-        applies-to: "version-updates"
-        patterns:
-          - "*"
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    groups:
-      ci-dependencies:
-        applies-to: "version-updates"
+      all-dependencies:
+        applies-to: version-updates
         patterns:
           - "*"
