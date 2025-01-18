@@ -2,7 +2,7 @@
   "name": "@jackyzha0/quartz",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
-  "version": "4.2.3",
+  "version": "4.4.0",
   "type": "module",
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
@@ -21,7 +21,7 @@
   },
   "engines": {
     "npm": ">=9.3.1",
-    "node": ">=18.14"
+    "node": "20 || >=22"
   },
   "keywords": [
     "site generator",
@@ -43,10 +43,10 @@
     "chokidar": "^4.0.3",
     "cli-spinner": "^0.2.10",
     "d3": "^7.9.0",
-    "esbuild-sass-plugin": "^2.16.1",
+    "esbuild-sass-plugin": "^3.3.1",
     "flexsearch": "0.7.43",
     "github-slugger": "^2.0.0",
-    "globby": "^14.0.1",
+    "globby": "^14.0.2",
     "gray-matter": "^4.0.3",
     "hast-util-to-html": "^9.0.4",
     "hast-util-to-jsx-runtime": "^2.3.2",
@@ -102,7 +102,7 @@
     "@types/source-map-support": "^0.5.10",
     "@types/ws": "^8.5.13",
     "@types/yargs": "^17.0.32",
-    "esbuild": "^0.19.9",
+    "esbuild": "^0.24.2",
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2"
