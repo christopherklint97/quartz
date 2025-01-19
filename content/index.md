@@ -1,8 +1,9 @@
 ---
-title: Home
-description: This is the home page for Christopher Klint showcasing the thoughts, writings, and fun activities going on here.
+title: Christopher Klint
+description: Christopher, Director of Technology & Innovation at Nenda, builds innovative digital products through software engineering and leadership.
 ---
-Hi there! 👋 My name is Chris and I am Director of Technology & Innovation at [Nenda](https://nenda.com/). You can learn about myself and my full resume [on Linkedin](https://www.linkedin.com/in/christopherklint/) and you can always [[contact|get in touch]].
+Hi there! My name is Christopher, and I am the Director of Technology & Innovation at [Nenda](https://nenda.com/). I bring ideas to life as a developer, leader, and spokesperson, with a focus on creating innovative digital products that users love.
 
-Why I created this website is because I wanted to have a space for writing out my thoughts and working through different concepts that are not just stuck in my head. Sometimes I like to rant as well, so it's a mix of both!
-#### [[blog/index|To the blog!]]
+My background spans software engineering, product leadership, and team management. If you’re looking to develop compelling solutions or want an experienced technology leader to guide your next project, you’ve come to the right place.
+
+You can explore more about my professional experience on [LinkedIn](https://www.linkedin.com/in/christopherklint/). I’m always open to new opportunities, collaborations, and conversations—feel free to [[contact|get in touch]] at any time.

@@ -1,9 +1,8 @@
 ---
 title: Azure services and cost optimization strategies
 description: Understand the core Azure services and how to optimize costs effectively.
+date: 2025-01-17
 ---
-# Understanding core services and cost optimization on Azure
-
 Understanding the core services and how they can be used is crucial for optimizing their use and minimizing costs. This page provides an overview of the most important Azure services and includes checklists to help reduce expenses.
 
 ## 1. Azure virtual machines (VMs)

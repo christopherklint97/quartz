@@ -1,3 +1,10 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+html {
+  font-size: 18px;
+}
+
+header {
+  justify-content: flex-end;
+  gap: unset;
+}

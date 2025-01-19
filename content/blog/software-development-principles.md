@@ -1,6 +1,7 @@
 ---
 title: Software development principles
 description: Learn about different software development principles and how they can be applied in practice.
+date: 2025-01-03
 ---
 
 Here are examples that demonstrate different software development principles using functional programming in TypeScript. By focusing on pure functions, immutability, and higher-order functions, we can achieve similar goals as object-oriented approaches but with a functional paradigm.

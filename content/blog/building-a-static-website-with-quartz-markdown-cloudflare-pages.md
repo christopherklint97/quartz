@@ -1,6 +1,7 @@
 ---
 title: Building a static website with Quartz, Markdown, and Cloudflare Pages
 description: Learn how to create a fast, secure, and easy-to-maintain website using Quartz, Markdown, and Cloudflare Pages.
+date: 2024-12-20
 ---
 ## Introduction
 
@@ -226,7 +227,3 @@ Looking ahead, I plan to continue refining the site, adding new features and con
 If you're considering building a personal website or blog, I highly recommend exploring the combination of Quartz, Markdown, and Cloudflare Pages. This setup offers a perfect balance of simplicity and power, making it an excellent choice for developers and content creators alike. Whether you're a seasoned pro or just getting started, this approach can help you create a beautiful, performant website with minimal hassle.
 
 Thank you for joining me on this journey, and I hope you found this walkthrough helpful. Happy coding!
-
----
-
-Feel free to reach out if you have any questions, comments, or other feedback. You can contact me through the form on my [[contact|contact page]].

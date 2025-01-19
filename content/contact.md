@@ -1,18 +1,9 @@
 ---
-title: Contact
-description: Reach out to me by filling out the form and give your questions, comments, and other feedback.
+title: Get in touch
+description: Connect with Christopher, a forward-thinking speaker and mentor, available for podcasts, events, volunteering, and other opportunities.
 ---
+I love connecting with curious minds and forward-thinkers. If you’re looking for a dynamic speaker for your next podcast or event, interested in teaming up on an industry project, or eager to swap ideas about volunteering and mentoring opportunities, let’s talk.
 
-Feel free to reach out by filling out the form below.
+Although I’m currently fully employed, I occasionally take on select consulting engagements. If you have a compelling challenge or vision you’d like to explore, I’m happy to consider how we might collaborate.
 
-<form style="display: flex; flex-direction: column;" action="https://formspree.io/f/xeqyybya" method="POST">
-  <label for="name">Name:</label>
-  <input style="margin-top: 1rem; padding: 0.5rem;" type="text" id="name" name="name" required>
-  <label style="margin-top: 1rem;" for="email">Email:</label>
-  <input style="margin-top: 1rem; padding: 0.5rem;" type="email" id="email" name="email" required>
-  <label style="margin-top: 1rem;" for="message">Message:</label>
-  <textarea style="margin-top: 1rem; padding: 0.5rem; height: 10rem;" id="message" name="message" required></textarea>
-
-<button style="margin-top: 1rem; padding: 0.5rem;" type="submit">Send</button>
-
-</form>
+Have a project in mind or a question I can help with? [Send me an email](mailto:christopher@klovesconsulting.com), and let’s see what we can build together!
