@@ -1,5 +1,5 @@
 ---
-title: Why Node.js Is single-threaded (and why that’s actually pretty cool)
+title: Why Node.js is single-threaded (and why that’s actually pretty cool)
 description: Dive into Node.js’s single-threaded event loop, discover how non-blocking I/O fuels high-performance backends, and level up your server-side JS skills.
 date: 2025-01-22
 ---
