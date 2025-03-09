@@ -1,9 +1,34 @@
 ---
-title: Get in touch
-description: Connect with Christopher, a forward-thinking speaker and mentor, available for podcasts, events, volunteering, and other opportunities.
+title: Contact me – Christopher Klint, CTO & engineering leader
+description: Contact Christopher Klint, CTO & fractional CTO in Stockholm, for strategic tech leadership, consulting, keynote speaking, or SaaS & cloud architecture expertise.
 ---
-I love connecting with curious minds and forward-thinkers. If you’re looking for a dynamic speaker for your next podcast or event, interested in teaming up on an industry project, or eager to swap ideas about volunteering and mentoring opportunities, let’s talk.
+Looking for an experienced CTO or fractional CTO to lead your organization's technology growth? Interested in booking me for your next tech event, keynote speech, webinar, or podcast?
 
-Although I’m currently fully employed, I occasionally take on consulting engagements. If you have a compelling challenge or vision you’d like to explore, I’m happy to consider how we might collaborate.
+## Let's get in touch
 
-Have a project in mind or a question I can help with? [Send me an email](mailto:christopher@klovesconsulting.com), and let’s see what we can build together!
+I'm excited to discuss how I can support your company's technology goals and innovation strategy. With deep expertise in scaling global engineering teams, SaaS product development, and cloud architecture, I’m committed to driving sustainable business success through technology.
+
+### How I can help your business:
+
+- **CTO & fractional CTO services:** Strategic technology leadership tailored to your organization's unique needs.
+- **Tech speaking & thought leadership:** Engaging presentations on innovation, leadership, engineering culture, and technology trends.
+- **Technology consulting:** Expertise in scalable SaaS architectures, cloud-native solutions (Azure, AWS, Google Cloud), and full-stack technologies (Typescript, React, Golang, Node.js, GraphQL, Microservices).
+
+## Reach me directly:
+
+- **Email:** [christopher.klint@gmail.com](mailto:christopher.klint@gmail.com)
+- **LinkedIn:** [Connect with me on LinkedIn](https://www.linkedin.com/in/christopherklint)
+
+## Schedule a call:
+
+Ready to discuss your tech strategy or book a speaking engagement? Schedule a quick introductory call to explore how I can add value to your team or event.
+
+[Schedule your call today →](https://chatgpt.com/c/67cdbfac-a014-8010-9f8c-7071898850f8#)
+
+## Why work with me?
+
+- I have a proven track record in technology-driven business growth.
+- Extensive experience scaling global teams and optimizing cloud infrastructure costs.
+- Recognized thought leader, featured at Women in Tech Sweden and various tech podcasts.
+
+Let’s build something great together!
