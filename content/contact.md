@@ -23,7 +23,7 @@ I'm excited to discuss how I can support your company's technology goals and inn
 
 Ready to discuss your tech strategy or book a speaking engagement? Schedule a quick introductory call to explore how I can add value to your team or event.
 
-[Schedule your call today →](https://chatgpt.com/c/67cdbfac-a014-8010-9f8c-7071898850f8#)
+[Schedule your call today →](https://cal.com/christopherklint/30-min)
 
 ## Why work with me?
 
