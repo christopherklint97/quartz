@@ -5,7 +5,7 @@ date: 2025-01-03
 ---
 Throughout my career, several software development principles have consistently helped me manage complexity and keep projects maintainable. Among these, I find the SOLID principles, DRY, KISS, YAGNI, Separation of Concerns, Encapsulation, and Polymorphism especially useful. Below, I discuss briefly what each principle means and why they have become my favorites.
 
-## SOLID Principles
+## SOLID principles
 
 SOLID is a set of five design principles by Robert C. Martin aimed at making code more maintainable.
 
@@ -41,7 +41,7 @@ KISS is about avoiding unnecessary complexity. Early on, I tended to overcomplic
 
 YAGNI advises against adding features before they're needed. Previously, I would sometimes build features "just in case," which often went unused. Now, I only add features when they're clearly required, which saves time and reduces complexity.
 
-## Separation of Concerns
+## Separation of concerns
 
 This principle involves separating software into distinct parts, each handling a specific responsibility. Initially, mixing responsibilities caused confusion during maintenance. Implementing clear separation has made my projects easier to understand and update.
 
@@ -53,7 +53,7 @@ Encapsulation involves hiding internal details of an object and only exposing wh
 
 Polymorphism allows objects from different classes to be treated as instances of the same superclass or interface. Initially, this seemed abstract, but it became valuable when handling different behaviors with a common interface. It simplifies extending and adapting code without altering stable parts.
 
-## Why These Principles Matter
+## Why these principles matter
 
 These principles have improved my approach to coding and design. They help me create maintainable, scalable, and clear software. By following them, I've managed to avoid common issues like overly complex or fragile code, making my projects easier to maintain in the long run.
 
