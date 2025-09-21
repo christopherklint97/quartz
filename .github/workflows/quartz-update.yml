@@ -1,0 +1,55 @@
+name: Keep Quartz Updated
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  quartz-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Update Quartz
+        run: npx quartz update
+
+      - name: Check types and formatting
+        run: npm run check
+
+      - name: Run tests
+        run: npm test
+
+      - name: Ensure Quartz builds
+        run: npx quartz build --bundleInfo -d docs
+
+      - name: Create Pull Request with updates
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update Quartz"
+          title: "chore: update Quartz"
+          body: |
+            Automated updates via `npx quartz update`.
+          branch: chore/quartz-update
+          delete-branch: true
