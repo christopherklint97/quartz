@@ -1,0 +1,47 @@
+name: Weekly Quartz Sync
+
+on:
+  schedule:
+    - cron: '0 9 * * 1' # Runs at 9:00 AM UTC every Monday
+  workflow_dispatch:
+
+jobs:
+  quartz-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync Quartz content
+        run: npx quartz sync
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Quartz sync: $(date +'%b %d, %Y, %-I:%M %p')"
+            git push
+          fi
