@@ -23,11 +23,18 @@ let currentExplorerState: Array<FolderState>
 function toggleExplorer(this: HTMLElement) {
   const nearestExplorer = this.closest(".explorer") as HTMLElement
   if (!nearestExplorer) return
-  nearestExplorer.classList.toggle("collapsed")
+  const explorerCollapsed = nearestExplorer.classList.toggle("collapsed")
   nearestExplorer.setAttribute(
     "aria-expanded",
     nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
   )
+
+  if (!explorerCollapsed) {
+    // Stop <html> from being scrollable when mobile explorer is open
+    document.documentElement.classList.add("mobile-no-scroll")
+  } else {
+    document.documentElement.classList.remove("mobile-no-scroll")
+  }
 }
 
 function toggleFolder(evt: MouseEvent) {
@@ -134,9 +141,9 @@ function createFolderNode(
   }
 
   for (const child of node.children) {
-    const childNode = child.data
-      ? createFileNode(currentSlug, child)
-      : createFolderNode(currentSlug, child, opts)
+    const childNode = child.isFolder
+      ? createFolderNode(currentSlug, child, opts)
+      : createFileNode(currentSlug, child)
     ul.appendChild(childNode)
   }
 
@@ -161,7 +168,7 @@ async function setupExplorer(currentSlug: FullSlug) {
     // Get folder state from local storage
     const storageTree = localStorage.getItem("fileTree")
     const serializedExplorerState = storageTree && opts.useSavedState ? JSON.parse(storageTree) : []
-    const oldIndex = new Map(
+    const oldIndex = new Map<string, boolean>(
       serializedExplorerState.map((entry: FolderState) => [entry.path, entry.collapsed]),
     )
 
@@ -186,10 +193,14 @@ async function setupExplorer(currentSlug: FullSlug) {
 
     // Get folder paths for state management
     const folderPaths = trie.getFolderPaths()
-    currentExplorerState = folderPaths.map((path) => ({
-      path,
-      collapsed: oldIndex.get(path) === true,
-    }))
+    currentExplorerState = folderPaths.map((path) => {
+      const previousState = oldIndex.get(path)
+      return {
+        path,
+        collapsed:
+          previousState === undefined ? opts.folderDefaultState === "collapsed" : previousState,
+      }
+    })
 
     const explorerUl = explorer.querySelector(".explorer-ul")
     if (!explorerUl) continue
@@ -259,15 +270,30 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   await setupExplorer(currentSlug)
 
   // if mobile hamburger is visible, collapse by default
-  for (const explorer of document.getElementsByClassName("mobile-explorer")) {
-    if (explorer.checkVisibility()) {
+  for (const explorer of document.getElementsByClassName("explorer")) {
+    const mobileExplorer = explorer.querySelector(".mobile-explorer")
+    if (!mobileExplorer) return
+
+    if (mobileExplorer.checkVisibility()) {
       explorer.classList.add("collapsed")
       explorer.setAttribute("aria-expanded", "false")
-    }
-  }
 
-  const hiddenUntilDoneLoading = document.querySelector("#mobile-explorer")
-  hiddenUntilDoneLoading?.classList.remove("hide-until-loaded")
+      // Allow <html> to be scrollable when mobile explorer is collapsed
+      document.documentElement.classList.remove("mobile-no-scroll")
+    }
+
+    mobileExplorer.classList.remove("hide-until-loaded")
+  }
+})
+
+window.addEventListener("resize", function () {
+  // Desktop explorer opens by default, and it stays open when the window is resized
+  // to mobile screen size. Applies `no-scroll` to <html> in this edge case.
+  const explorer = document.querySelector(".explorer")
+  if (explorer && !explorer.classList.contains("collapsed")) {
+    document.documentElement.classList.add("mobile-no-scroll")
+    return
+  }
 })
 
 function setFolderState(folderElement: HTMLElement, collapsed: boolean) {
