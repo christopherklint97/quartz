@@ -55,14 +55,11 @@ jobs:
         continue-on-error: true
         run: npx quartz build --bundleInfo -d docs
 
-      - name: Discard workflow file changes
-        run: |
-          # Reset any changes to workflow files to avoid needing workflows permission
-          git checkout HEAD -- .github/workflows/ 2>/dev/null || true
-
       - name: Create Pull Request with updates
         uses: peter-evans/create-pull-request@v6
         with:
+          # PAT with 'repo' and 'workflow' scopes required to push workflow file changes
+          token: ${{ secrets.PAT_TOKEN }}
           commit-message: "chore: update Quartz"
           title: "chore: update Quartz"
           body: |
