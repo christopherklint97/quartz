@@ -20,11 +20,20 @@ interface FolderContentOptions {
    * Whether to display a list of pages in the folder
    */
   showPageListing: boolean
+  /**
+   * Whether to show pages in subfolders
+   */
+  showSubfolders: boolean
+  /**
+   * Custom sort function for pages
+   */
+  sort?: SortFn
 }
 
 const defaultOptions: FolderContentOptions = {
   showFolderCount: true,
   showPageListing: false,
+  showSubfolders: false,
 }
 
 export default ((opts?: Partial<FolderContentOptions>) => {
