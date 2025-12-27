@@ -57,8 +57,9 @@ jobs:
 
       - name: Discard workflow file changes
         run: |
-          # Reset any changes to workflow files to avoid needing workflows permission
-          git checkout HEAD -- .github/workflows/ 2>/dev/null || true
+          # Restore workflow files from origin/v4 to avoid needing workflows permission
+          # This reverts any workflow changes from the upstream Quartz update
+          git checkout origin/v4 -- .github/workflows/ 2>/dev/null || true
 
       - name: Create Pull Request with updates
         uses: peter-evans/create-pull-request@v6
