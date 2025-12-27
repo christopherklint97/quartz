@@ -41,12 +41,18 @@ jobs:
         run: npx quartz update
 
       - name: Check types and formatting
+        id: check
+        continue-on-error: true
         run: npm run check
 
       - name: Run tests
+        id: test
+        continue-on-error: true
         run: npm test
 
       - name: Ensure Quartz builds
+        id: build
+        continue-on-error: true
         run: npx quartz build --bundleInfo -d docs
 
       - name: Create Pull Request with updates
@@ -56,5 +62,17 @@ jobs:
           title: "chore: update Quartz"
           body: |
             Automated updates via `npx quartz update`.
+
+            ## Status
+            - Type check & formatting: ${{ steps.check.outcome }}
+            - Tests: ${{ steps.test.outcome }}
+            - Build: ${{ steps.build.outcome }}
+
+            ## Manual Steps Required
+            If any checks failed, you may need to:
+            1. Review breaking changes in the [Quartz changelog](https://github.com/jackyzha0/quartz/releases)
+            2. Update `quartz.config.ts` for any deprecated/new options
+            3. Run `npm install` to update dependencies
+            4. Fix any TypeScript errors from API changes
           branch: chore/quartz-update
           delete-branch: true
