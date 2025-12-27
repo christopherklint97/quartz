@@ -11,6 +11,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      workflows: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -54,12 +55,6 @@ jobs:
         id: build
         continue-on-error: true
         run: npx quartz build --bundleInfo -d docs
-
-      - name: Discard workflow file changes
-        run: |
-          # Restore workflow files from origin/v4 to avoid needing workflows permission
-          # This reverts any workflow changes from the upstream Quartz update
-          git checkout origin/v4 -- .github/workflows/ 2>/dev/null || true
 
       - name: Create Pull Request with updates
         uses: peter-evans/create-pull-request@v6
